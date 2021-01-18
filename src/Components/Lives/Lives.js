@@ -1,25 +1,21 @@
-import React from 'react';
+import React, {memo} from 'react';
 import classes from './Lives.module.css';
+import Live from './Live/Live';
 
 const lives = (props) => {
+
+    console.log("[Lives.js] render");
 
     const hearts = [...Array(9)].map((_, i) => {
         if (props.lives > i) {
             return (
-                <div key={i}>
-                    <i className={`fas fa-heart ${classes.defaultIcon}`} data-i={i}></i>
-                    <i className={`far fa-heart ${classes.alternativeIcon}`} data-i={i}></i>
-                </div>
+                <Live classFirst="defaultIcon" classSecond="alternativeIcon" key={i}/>
             ) 
         } else {
             return (
-                <div key={i}>
-                    <i className={`fas fa-heart ${classes.alternativeIcon}`} data-i={i}></i>
-                    <i className={`far fa-heart ${classes.defaultIcon}`} data-i={i}></i>
-                </div>
+                <Live classFirst="alternativeIcon" classSecond="defaultIcon" key={i} />
             ) 
         }
-
     });
 
     return (
@@ -29,4 +25,4 @@ const lives = (props) => {
     );
 };
 
-export default lives;
+export default memo(lives);

@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {memo} from 'react';
 import classes from './Letters.module.css';
+import Letter from './Letter/Letter';
 
-const Letters = (props) => {
+const letters = (props) => {
+
+    console.log("[Letters.js] render");
 
     const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split("").map((letter) => {
-        let letterDiv = React.createRef();
-        return <button 
-                    ref={letterDiv} 
-                    key={letter} 
-                    onClick={() => {
-                        props.clickHandle(letterDiv.current);
-                    }}>
-                        {letter.toUpperCase()}
-                </button>;
+        return (
+            <Letter 
+                key={letter}
+                onClick={props.clickHandle}
+                value={letter.toUpperCase()}
+            />
+        )
     });
 
     return (
@@ -22,4 +23,4 @@ const Letters = (props) => {
     );
 };
 
-export default Letters;
+export default memo(letters);

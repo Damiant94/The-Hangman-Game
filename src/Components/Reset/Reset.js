@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {memo} from 'react';
 import classes from './Reset.module.css';
 
 const reset = () => {
+    console.log("[Reset.js] render");
     return (
         <button type="button" className={classes.Reset} onClick={() => {window.location.reload()}}>Reset</button>
     );
 };
 
-export default reset;
+export default memo(reset);

@@ -33,7 +33,6 @@ class Game extends Component {
 
   letterClickHandler = (clickedLetter) => {
     clickedLetter.disabled = true;
-    clickedLetter.onclick = () => {console.log("hej")}
     const letterStr = clickedLetter.innerHTML;
     if (this.state.sentence.includes(letterStr)) {
       clickedLetter.className = classes.green
@@ -83,6 +82,7 @@ class Game extends Component {
   }
 
   render() {
+    console.log("[Game.js] render");
 
     let result;
     if (this.state.win === true) {
