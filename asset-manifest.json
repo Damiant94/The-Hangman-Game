@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/The-Hangman-Game/static/css/main.2029ee2d.chunk.css",
-    "main.js": "/The-Hangman-Game/static/js/main.6b75006d.chunk.js",
-    "main.js.map": "/The-Hangman-Game/static/js/main.6b75006d.chunk.js.map",
+    "main.css": "/The-Hangman-Game/static/css/main.f0346fa0.chunk.css",
+    "main.js": "/The-Hangman-Game/static/js/main.b4fcc099.chunk.js",
+    "main.js.map": "/The-Hangman-Game/static/js/main.b4fcc099.chunk.js.map",
     "runtime-main.js": "/The-Hangman-Game/static/js/runtime-main.e3cb9a7f.js",
     "runtime-main.js.map": "/The-Hangman-Game/static/js/runtime-main.e3cb9a7f.js.map",
     "static/js/2.ef196a01.chunk.js": "/The-Hangman-Game/static/js/2.ef196a01.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.d9ffcc54.chunk.js": "/The-Hangman-Game/static/js/3.d9ffcc54.chunk.js",
     "static/js/3.d9ffcc54.chunk.js.map": "/The-Hangman-Game/static/js/3.d9ffcc54.chunk.js.map",
     "index.html": "/The-Hangman-Game/index.html",
-    "static/css/main.2029ee2d.chunk.css.map": "/The-Hangman-Game/static/css/main.2029ee2d.chunk.css.map",
+    "static/css/main.f0346fa0.chunk.css.map": "/The-Hangman-Game/static/css/main.f0346fa0.chunk.css.map",
     "static/js/2.ef196a01.chunk.js.LICENSE.txt": "/The-Hangman-Game/static/js/2.ef196a01.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e3cb9a7f.js",
     "static/js/2.ef196a01.chunk.js",
-    "static/css/main.2029ee2d.chunk.css",
-    "static/js/main.6b75006d.chunk.js"
+    "static/css/main.f0346fa0.chunk.css",
+    "static/js/main.b4fcc099.chunk.js"
   ]
 }
