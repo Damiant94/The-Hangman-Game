@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,MAAM;EACd,cAAc,EAAE,IAAI;EAEpB,KAAK,EAAE,OAAO;CACjB",
+    "sources": [
+        "Sentence.module.scss"
+    ],
+    "names": [],
+    "file": "Sentence.module.css"
+}

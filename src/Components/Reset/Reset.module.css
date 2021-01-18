@@ -1,0 +1,29 @@
+.Reset {
+  margin: 1rem 0;
+  width: 8rem;
+  height: 3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 1px solid #5da4a6;
+  border-radius: 0.3rem;
+  background-color: #111;
+  color: inherit;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Reset:hover {
+  border: 1px solid #6df1d8;
+}
+/*# sourceMappingURL=Reset.module.css.map */
