@@ -9,10 +9,8 @@ import Reset from '../../Components/Reset/Reset';
 import words from '../../utils/words';
 
 class Game extends Component {
-
   constructor() {
     super();
-
     const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
     let currentSentence = "";
     for (const letter of sentence) {
@@ -82,8 +80,6 @@ class Game extends Component {
   }
 
   render() {
-    console.log("[Game.js] render");
-
     let result;
     if (this.state.win === true) {
       result = this.showResult(true);

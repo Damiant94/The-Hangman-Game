@@ -1,4 +1,4 @@
-.Live {
+%live {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,24 +7,58 @@
     position: relative;
     color: #d30cb8;
     margin: 0 0.2rem;
+}
+
+%i {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+%show {
+    transition: opacity 1s, transform 1s;
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+
+%hide {
+    transition: opacity 1s, transform 1s;
+    transform: rotate(-90deg) scale(0.5);
+    opacity: 0;
+}
+
+.Live {
+    @extend %live;
 
     i {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        font-size: 1.2rem;
+        @extend %i;
 
-        &.defaultIcon {
-            transition: opacity 1s, transform 1s;
+        &:first-of-type {
+            @extend %show;
         }
 
-        &.alternativeIcon {
-            transition: opacity 1s, transform 1s;
-            transform: rotate(-90deg) scale(0.5);
-            opacity: 0;
+        &:last-of-type {
+            @extend %hide;
+        }
+    }
+}
+
+.LiveLost {
+    @extend %live;
+
+    i {
+        @extend %i;
+
+        &:first-of-type {
+            @extend %hide;
+        }
+
+        &:last-of-type {
+            @extend %show;
         }
     }
 }

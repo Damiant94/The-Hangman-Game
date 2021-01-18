@@ -3,9 +3,6 @@ import classes from './Letters.module.css';
 import Letter from './Letter/Letter';
 
 const letters = (props) => {
-
-    console.log("[Letters.js] render");
-
     const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split("").map((letter) => {
         return (
             <Letter 

@@ -1,4 +1,4 @@
-.Live {
+.Live, .LiveLost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
   margin: 0 0.2rem;
 }
 
-.Live i {
+.Live i, .LiveLost i {
   position: absolute;
   display: block;
   width: 100%;
@@ -25,14 +25,17 @@
   font-size: 1.2rem;
 }
 
-.Live i.defaultIcon {
+.Live i:first-of-type, .LiveLost i:last-of-type {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, transform 1s;
   transition: opacity 1s, transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  opacity: 1;
 }
 
-.Live i.alternativeIcon {
+.Live i:last-of-type, .LiveLost i:first-of-type {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, transform 1s;

@@ -1,8 +1,6 @@
 import React, {createRef, memo} from 'react';
 
 const letter = (props) => {
-
-    console.log("[Letter.js] render");
     let letterBtn = createRef();
 
     return (

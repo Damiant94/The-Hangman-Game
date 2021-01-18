@@ -3,17 +3,14 @@ import classes from './Lives.module.css';
 import Live from './Live/Live';
 
 const lives = (props) => {
-
-    console.log("[Lives.js] render");
-
     const hearts = [...Array(9)].map((_, i) => {
         if (props.lives > i) {
             return (
-                <Live classFirst="defaultIcon" classSecond="alternativeIcon" key={i}/>
+                <Live classLive="Live" key={i}/>
             ) 
         } else {
             return (
-                <Live classFirst="alternativeIcon" classSecond="defaultIcon" key={i} />
+                <Live classLive="LiveLost" key={i} />
             ) 
         }
     });
