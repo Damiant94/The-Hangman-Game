@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/The-Hangman-Game/static/css/main.f0346fa0.chunk.css",
-    "main.js": "/The-Hangman-Game/static/js/main.b4fcc099.chunk.js",
-    "main.js.map": "/The-Hangman-Game/static/js/main.b4fcc099.chunk.js.map",
-    "runtime-main.js": "/The-Hangman-Game/static/js/runtime-main.e3cb9a7f.js",
-    "runtime-main.js.map": "/The-Hangman-Game/static/js/runtime-main.e3cb9a7f.js.map",
-    "static/js/2.ef196a01.chunk.js": "/The-Hangman-Game/static/js/2.ef196a01.chunk.js",
-    "static/js/2.ef196a01.chunk.js.map": "/The-Hangman-Game/static/js/2.ef196a01.chunk.js.map",
-    "static/js/3.d9ffcc54.chunk.js": "/The-Hangman-Game/static/js/3.d9ffcc54.chunk.js",
-    "static/js/3.d9ffcc54.chunk.js.map": "/The-Hangman-Game/static/js/3.d9ffcc54.chunk.js.map",
+    "main.css": "/The-Hangman-Game/static/css/main.88cf18ed.chunk.css",
+    "main.js": "/The-Hangman-Game/static/js/main.f034ac4a.chunk.js",
+    "main.js.map": "/The-Hangman-Game/static/js/main.f034ac4a.chunk.js.map",
+    "runtime-main.js": "/The-Hangman-Game/static/js/runtime-main.d77bc31d.js",
+    "runtime-main.js.map": "/The-Hangman-Game/static/js/runtime-main.d77bc31d.js.map",
+    "static/js/2.311c7742.chunk.js": "/The-Hangman-Game/static/js/2.311c7742.chunk.js",
+    "static/js/2.311c7742.chunk.js.map": "/The-Hangman-Game/static/js/2.311c7742.chunk.js.map",
+    "static/js/3.4f29574c.chunk.js": "/The-Hangman-Game/static/js/3.4f29574c.chunk.js",
+    "static/js/3.4f29574c.chunk.js.map": "/The-Hangman-Game/static/js/3.4f29574c.chunk.js.map",
     "index.html": "/The-Hangman-Game/index.html",
-    "static/css/main.f0346fa0.chunk.css.map": "/The-Hangman-Game/static/css/main.f0346fa0.chunk.css.map",
-    "static/js/2.ef196a01.chunk.js.LICENSE.txt": "/The-Hangman-Game/static/js/2.ef196a01.chunk.js.LICENSE.txt"
+    "static/css/main.88cf18ed.chunk.css.map": "/The-Hangman-Game/static/css/main.88cf18ed.chunk.css.map",
+    "static/js/2.311c7742.chunk.js.LICENSE.txt": "/The-Hangman-Game/static/js/2.311c7742.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e3cb9a7f.js",
-    "static/js/2.ef196a01.chunk.js",
-    "static/css/main.f0346fa0.chunk.css",
-    "static/js/main.b4fcc099.chunk.js"
+    "static/js/runtime-main.d77bc31d.js",
+    "static/js/2.311c7742.chunk.js",
+    "static/css/main.88cf18ed.chunk.css",
+    "static/js/main.f034ac4a.chunk.js"
   ]
 }
