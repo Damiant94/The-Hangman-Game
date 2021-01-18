@@ -77,8 +77,7 @@ class Game extends Component {
         <p className={classes[classColor]}>{message}</p>
         <p>Correct answer:</p> 
         <p className={classes.greenResult}>{this.state.sentence.join("")}</p>
-        <p>Try again?</p>
-        <button type="button" onClick={() => {window.location.reload()}}>Yes</button>
+        <button type="button" onClick={() => {window.location.reload()}}>Try again</button>
       </div>
     )
   }

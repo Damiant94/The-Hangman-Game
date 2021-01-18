@@ -24,7 +24,7 @@
   border: 1px solid #5c2c6d;
   border-radius: 0.3rem;
   background-color: #111;
-  color: inherit;
+  color: #b8aec8;
   outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,5 +44,6 @@
 
 .Letters button:hover {
   border: 1px solid #d30cb8;
+  color: white;
 }
 /*# sourceMappingURL=Letters.module.css.map */

@@ -7,7 +7,7 @@
   border: 1px solid #5da4a6;
   border-radius: 0.3rem;
   background-color: #111;
-  color: inherit;
+  color: #b8aec8;
   outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,5 +25,6 @@
 
 .Reset:hover {
   border: 1px solid #6df1d8;
+  color: white;
 }
 /*# sourceMappingURL=Reset.module.css.map */

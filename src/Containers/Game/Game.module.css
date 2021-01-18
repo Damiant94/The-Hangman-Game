@@ -94,27 +94,27 @@
   color: #b8aec8;
 }
 
-.Game .results p:nth-of-type(4) {
-  color: #b8aec8;
-}
-
 .Game .results button {
   border: none;
   font-family: inherit;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin: 1rem;
   width: 5rem;
   height: 3rem;
-  background-color: #6df1d8;
+  color: #b8aec8;
+  background-color: #111;
+  border: 2px solid #5da4a6;
   outline: none;
   border-radius: 0.8rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .Game .results button:hover {
-  background-color: #7ef2e9;
+  border: 2px solid #6df1d8;
+  color: white;
 }
 /*# sourceMappingURL=Game.module.css.map */
