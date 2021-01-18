@@ -11,6 +11,21 @@ import words from '../../utils/words';
 class Game extends Component {
   constructor() {
     super();
+
+    const [sentence, currentSentence] = this.createSentence();
+    this.state = this.getFreshState(sentence, currentSentence);
+  }
+
+  getFreshState = (sentence, currentSentence) => {
+    return {
+      sentence: sentence,
+      currentSentence: currentSentence,
+      lives: 9,
+      win: undefined
+    }
+  };
+
+  createSentence = () => {
     const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
     let currentSentence = "";
     for (const letter of sentence) {
@@ -20,14 +35,20 @@ class Game extends Component {
         currentSentence += "-";
       }
     }
+    return [sentence, currentSentence];
+  };
 
-    this.state = {
-      sentence: sentence,
-      currentSentence: currentSentence,
-      lives: 9,
-      win: undefined
-    };
-  }
+  restart = () => {
+    const [sentence, currentSentence] = this.createSentence();
+
+    this.setState(this.getFreshState(sentence, currentSentence));
+
+    
+    for (const button of document.querySelectorAll("div[class*='Letters'] > button")) {
+      button.className = "";
+      button.disabled = false;
+    }
+  };
 
   letterClickHandler = (clickedLetter) => {
     clickedLetter.disabled = true;
@@ -74,7 +95,7 @@ class Game extends Component {
         <p className={classes[classColor]}>{message}</p>
         <p>Correct answer:</p> 
         <p className={classes.greenResult}>{this.state.sentence.join("")}</p>
-        <button type="button" onClick={() => {window.location.reload()}}>Try again</button>
+        <button type="button" onClick={this.restart}>Try again</button>
       </div>
     )
   }
@@ -91,7 +112,7 @@ class Game extends Component {
           <Sentence 
           currentSentence={this.state.currentSentence} />
           <Letters clickHandle={this.letterClickHandler} />
-          <Reset />
+          <Reset clickHandle={this.restart} />
         </Fragment>
       );
     }

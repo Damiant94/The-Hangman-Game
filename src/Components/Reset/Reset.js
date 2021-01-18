@@ -1,9 +1,9 @@
 import React, {memo} from 'react';
 import classes from './Reset.module.css';
 
-const reset = () => {
+const reset = (props) => {
     return (
-        <button type="button" className={classes.Reset} onClick={() => {window.location.reload()}}>Reset</button>
+        <button type="button" className={classes.Reset} onClick={props.clickHandle}>Reset</button>
     );
 };
 
