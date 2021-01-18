@@ -4,6 +4,7 @@
   font-size: 1.8rem;
   margin: 1rem 0;
   pointer-events: none;
-  color: #5da4a6;
+  color: #6df1d8;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5da4a6, 0 0 40px #5da4a6;
 }
 /*# sourceMappingURL=Header.module.css.map */
