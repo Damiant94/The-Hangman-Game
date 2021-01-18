@@ -1,4 +1,4 @@
-# The-Hangman-Game
+# The Hangman Game
 My implementation of The Hangman Game. 
 
 # Technologies
