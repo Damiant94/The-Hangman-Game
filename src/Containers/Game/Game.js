@@ -1,22 +1,22 @@
 import React, {Component, Fragment} from 'react';
-import classes from './Game.module.css';
 import Header from '../../Components/Header/Header';
 import Lives from '../../Components/Lives/Lives';
 import Sentence from '../../Components/Sentence/Sentence';
 import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
 
+import classes from './Game.module.css';
 import words from '../../utils/words';
 
 class Game extends Component {
   constructor() {
     super();
 
-    const [sentence, currentSentence] = this.createSentence();
-    this.state = this.getFreshState(sentence, currentSentence);
+    this.state = this.getFreshState();
   }
 
-  getFreshState = (sentence, currentSentence) => {
+  getFreshState = () => {
+    const [sentence, currentSentence] = this.createSentence();
     return {
       sentence: sentence,
       currentSentence: currentSentence,
@@ -39,11 +39,8 @@ class Game extends Component {
   };
 
   restart = () => {
-    const [sentence, currentSentence] = this.createSentence();
+    this.setState(this.getFreshState());
 
-    this.setState(this.getFreshState(sentence, currentSentence));
-
-    
     for (const button of document.querySelectorAll("div[class*='Letters'] > button")) {
       button.className = "";
       button.disabled = false;
