@@ -1,0 +1,45 @@
+.Letter {
+    font-family: 'Inconsolata';
+    margin: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #5c2c6d;
+    border-radius: 0.3rem;
+    background-color: #111;
+    color: #b8aec8;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid #d30cb8;
+        color: white;
+    }
+
+    &.Green {
+        background-color: #5da4a6;
+        border: 1px solid #6df1d8;
+        font-weight: bold;
+        color: #3c345c;
+        pointer-events: none;
+    
+        &:hover {
+        background-color: #5da4a6;
+        border: 1px solid #6df1d8;
+        }
+        }
+        
+    &.Red {
+        background-color: #3c345c;
+        pointer-events: none;
+        font-weight: bold;
+    
+        &:hover {
+            background-color: #3c345c;
+        }
+    }
+}

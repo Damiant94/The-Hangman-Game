@@ -6,6 +6,9 @@ import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
 
 import classes from './Game.module.css';
+import classesLive from '../../Components/Lives/Live/Live.module.css';
+import classesLetter from '../../Components/Letters/Letter/Letter.module.css';
+
 import words from '../../utils/words';
 
 class Game extends Component {
@@ -41,9 +44,13 @@ class Game extends Component {
   restart = () => {
     this.setState(this.getFreshState());
 
-    for (const button of document.querySelectorAll("div[class*='Letters'] > button")) {
-      button.className = "";
+    for (const button of document.querySelectorAll(`.${classesLetter.Green}, .${classesLetter.Red}`)) {
+      button.className = classesLetter.Letter;
       button.disabled = false;
+    }
+
+    for (const heart of document.querySelectorAll(`.${classesLive.LiveLost}`)) {
+      heart.className = classesLive.Live;
     }
   };
 
@@ -51,7 +58,7 @@ class Game extends Component {
     clickedLetter.disabled = true;
     const letterStr = clickedLetter.innerHTML;
     if (this.state.sentence.includes(letterStr)) {
-      clickedLetter.className = classes.green
+      clickedLetter.classList.add(classesLetter.Green);
       let newCurrentSentence = "";
       for (const letter of this.state.sentence) {
         if (letter === letterStr || letter === " " || this.state.currentSentence.includes(letter)) {
@@ -66,7 +73,8 @@ class Game extends Component {
         }
       });
     } else {
-      clickedLetter.className = classes.red
+      clickedLetter.classList.add(classesLetter.Red);
+      document.querySelector(`[data-live="${this.state.lives}"]`).className = classesLive.LiveLost;
       this.setState((prevState) => {
         return {lives: prevState.lives - 1}
       }, () => {

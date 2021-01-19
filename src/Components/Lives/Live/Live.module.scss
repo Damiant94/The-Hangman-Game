@@ -49,16 +49,16 @@
 
 .LiveLost {
     @extend %live;
-
+  
     i {
         @extend %i;
-
+  
         &:first-of-type {
             @extend %hide;
         }
-
+  
         &:last-of-type {
             @extend %show;
         }
     }
-}
+  }

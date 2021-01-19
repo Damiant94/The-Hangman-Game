@@ -17,33 +17,4 @@
       flex-wrap: wrap;
   margin: 1rem 0;
 }
-
-.Letters button {
-  margin: 0.3rem;
-  font-size: 1rem;
-  border: 1px solid #5c2c6d;
-  border-radius: 0.3rem;
-  background-color: #111;
-  color: #b8aec8;
-  outline: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.Letters button:hover {
-  border: 1px solid #d30cb8;
-  color: white;
-}
 /*# sourceMappingURL=Letters.module.css.map */
