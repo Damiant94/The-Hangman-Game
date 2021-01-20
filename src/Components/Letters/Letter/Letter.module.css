@@ -1,7 +1,7 @@
 .Letter {
-  font-family: 'Inconsolata';
   margin: 0.3rem;
   font-size: 1.2rem;
+  font-family: 'Inconsolata';
   border: 1px solid #5c2c6d;
   border-radius: 0.3rem;
   background-color: #111;
@@ -28,24 +28,24 @@
   color: white;
 }
 
-.Letter.Green {
+.Letter.Correct {
   pointer-events: none;
   background-color: #5da4a6;
   border: 1px solid #6df1d8;
   color: #3c345c;
 }
 
-.Letter.Green:hover {
+.Letter.Correct:hover {
   background-color: #5da4a6;
   border: 1px solid #6df1d8;
 }
 
-.Letter.Red {
+.Letter.Wrong {
   pointer-events: none;
   background-color: #3c345c;
 }
 
-.Letter.Red:hover {
+.Letter.Wrong:hover {
   background-color: #3c345c;
 }
 /*# sourceMappingURL=Letter.module.css.map */

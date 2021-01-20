@@ -1,4 +1,4 @@
-@import "../../utils/scss/colors.scss";
+@import "../../../utils/scss/colors.scss";
 
 .Letter {
     margin: 0.3rem;
@@ -21,7 +21,6 @@
         border: 1px solid $light-pink;
         color: white;
     }
-
 
     &.Correct {
         pointer-events: none;
