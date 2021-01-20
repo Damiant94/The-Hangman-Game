@@ -1,4 +1,4 @@
-.Live, .LiveLost {
+.Heart, .HeartLost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
   margin: 0 0.2rem;
 }
 
-.Live i, .LiveLost i {
+.Heart i, .HeartLost i {
   position: absolute;
   display: block;
   width: 100%;
@@ -25,7 +25,7 @@
   font-size: 1.2rem;
 }
 
-.Live i:first-of-type, .LiveLost i:last-of-type {
+.Heart i:first-of-type, .HeartLost i:last-of-type {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, transform 1s;
@@ -35,7 +35,7 @@
   opacity: 1;
 }
 
-.Live i:last-of-type, .LiveLost i:first-of-type {
+.Heart i:last-of-type, .HeartLost i:first-of-type {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, transform 1s;
@@ -44,4 +44,4 @@
           transform: rotate(-90deg) scale(0.5);
   opacity: 0;
 }
-/*# sourceMappingURL=Live.module.css.map */
+/*# sourceMappingURL=Heart.module.css.map */

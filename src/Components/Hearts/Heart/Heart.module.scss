@@ -1,6 +1,6 @@
-@import "../../utils/scss/colors.scss";
+@import "../../../utils/scss/colors.scss";
 
-%live {
+%heart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,8 +33,8 @@
     opacity: 0;
 }
 
-.Live {
-    @extend %live;
+.Heart {
+    @extend %heart;
 
     i {
         @extend %i;
@@ -49,8 +49,8 @@
     }
 }
 
-.LiveLost {
-    @extend %live;
+.HeartLost {
+    @extend %heart;
   
     i {
         @extend %i;
@@ -63,4 +63,4 @@
             @extend %show;
         }
     }
-  }
+}

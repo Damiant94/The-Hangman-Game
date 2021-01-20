@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,MAAM;CACjB",
-    "sources": [
-        "Lives.module.scss"
-    ],
-    "names": [],
-    "file": "Lives.module.css"
-}

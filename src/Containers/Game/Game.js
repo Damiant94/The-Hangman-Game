@@ -1,13 +1,13 @@
 import React, {Component, Fragment} from 'react';
 import Header from '../../Components/Header/Header';
-import Lives from '../../Components/Lives/Lives';
+import Hearts from '../../Components/Hearts/Hearts';
 import Sentence from '../../Components/Sentence/Sentence';
 import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
 import Result from '../../Components/Result/Result';
 
 import classes from './Game.module.css';
-import classesLive from '../../Components/Lives/Live/Live.module.css';
+import classesHeart from '../../Components/Hearts/Heart/Heart.module.css';
 import classesLetter from '../../Components/Letters/Letter/Letter.module.css';
 
 import words from '../../utils/js/words';
@@ -50,8 +50,8 @@ class Game extends Component {
       button.disabled = false;
     }
 
-    for (const heart of document.querySelectorAll(`.${classesLive.LiveLost}`)) {
-      heart.className = classesLive.Live;
+    for (const heart of document.querySelectorAll(`.${classesHeart.HeartLost}`)) {
+      heart.className = classesHeart.Heart;
     }
   };
 
@@ -75,7 +75,7 @@ class Game extends Component {
       });
     } else {
       clickedLetter.classList.add(classesLetter.Red);
-      document.querySelector(`[data-live="${this.state.lives}"]`).className = classesLive.LiveLost;
+      document.querySelector(`[data-heart="${this.state.lives}"]`).className = classesHeart.HeartLost;
       this.setState((prevState) => {
         return {lives: prevState.lives - 1}
       }, () => {
@@ -118,7 +118,7 @@ class Game extends Component {
     return (
       <div className={classes.Game}>
         <Header />
-        <Lives />
+        <Hearts />
         {view}
       </div>
     );
