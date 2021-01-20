@@ -117,7 +117,7 @@ class Game extends Component {
           message={message} 
           classColor={classColor}
           restart={this.restart} 
-          sentence={this.state.sentence}
+          sentence={this.state.sentence.join("")}
         />
       )
     }
