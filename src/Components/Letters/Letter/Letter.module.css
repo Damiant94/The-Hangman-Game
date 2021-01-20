@@ -1,7 +1,7 @@
 .Letter {
   font-family: 'Inconsolata';
   margin: 0.3rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 1px solid #5c2c6d;
   border-radius: 0.3rem;
   background-color: #111;
@@ -29,11 +29,10 @@
 }
 
 .Letter.Green {
+  pointer-events: none;
   background-color: #5da4a6;
   border: 1px solid #6df1d8;
-  font-weight: bold;
   color: #3c345c;
-  pointer-events: none;
 }
 
 .Letter.Green:hover {
@@ -42,9 +41,8 @@
 }
 
 .Letter.Red {
-  background-color: #3c345c;
   pointer-events: none;
-  font-weight: bold;
+  background-color: #3c345c;
 }
 
 .Letter.Red:hover {

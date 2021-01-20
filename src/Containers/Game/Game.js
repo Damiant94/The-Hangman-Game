@@ -4,12 +4,13 @@ import Lives from '../../Components/Lives/Lives';
 import Sentence from '../../Components/Sentence/Sentence';
 import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
+import Result from '../../Components/Result/Result';
 
 import classes from './Game.module.css';
 import classesLive from '../../Components/Lives/Live/Live.module.css';
 import classesLetter from '../../Components/Letters/Letter/Letter.module.css';
 
-import words from '../../utils/words';
+import words from '../../utils/js/words';
 
 class Game extends Component {
   constructor() {
@@ -85,37 +86,24 @@ class Game extends Component {
     }
   };
 
-  showResult = (win=false) => {
-    let message;
-    let classColor;
-    if (win===true) {
-      message = "You won!";
-      classColor = "greenResult";
-    } else {
-      message = "You lose.";
-      classColor = "redResult";
-    }
-    return (      
-      <div className={classes.results}>
-        <p className={classes[classColor]}>{message}</p>
-        <p>Correct answer:</p> 
-        <p className={classes.greenResult}>{this.state.sentence.join("")}</p>
-        <button type="button" onClick={this.restart}>Try again</button>
-      </div>
-    )
-  }
-
   render() {
-    let result;
-    if (this.state.win === true) {
-      result = this.showResult(true);
+    let view;
+    if (this.state.win) {
+      view = <Result 
+                message="You won!" 
+                classColor="Win" 
+                restart={this.restart} 
+                sentence={this.state.sentence}/>
     } else if (this.state.win === false) {
-      result = this.showResult();
+      view = <Result 
+                message="You lose." 
+                classColor="Lose" 
+                restart={this.restart} 
+                sentence={this.state.sentence}/>
     } else {
-      result = (
+      view = (
         <Fragment>
-          <Sentence 
-          currentSentence={this.state.currentSentence} />
+          <Sentence currentSentence={this.state.currentSentence} />
           <Letters clickHandle={this.letterClickHandler} />
           <Reset clickHandle={this.restart} />
         </Fragment>
@@ -126,7 +114,7 @@ class Game extends Component {
       <div className={classes.Game}>
         <Header />
         <Lives lives={this.state.lives} />
-        {result}
+        {view}
       </div>
     );
   }

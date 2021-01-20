@@ -1,11 +1,13 @@
+@import "../../utils/scss/colors.scss";
+
 .Letter {
-    font-family: 'Inconsolata';
     margin: 0.3rem;
-    font-size: 1rem;
-    border: 1px solid #5c2c6d;
+    font-size: 1.2rem;
+    font-family: 'Inconsolata';
+    border: 1px solid $dark-pink;
     border-radius: 0.3rem;
-    background-color: #111;
-    color: #b8aec8;
+    background-color: $dark-background;
+    color: $light-creme;
     outline: none;
     display: flex;
     justify-content: center;
@@ -16,30 +18,29 @@
     cursor: pointer;
 
     &:hover {
-        border: 1px solid #d30cb8;
+        border: 1px solid $light-pink;
         color: white;
     }
 
+
     &.Green {
-        background-color: #5da4a6;
-        border: 1px solid #6df1d8;
-        font-weight: bold;
-        color: #3c345c;
         pointer-events: none;
+        background-color: $dark-cyan;
+        border: 1px solid $light-cyan;
+        color: $dark;
     
         &:hover {
-        background-color: #5da4a6;
-        border: 1px solid #6df1d8;
+        background-color: $dark-cyan;
+        border: 1px solid $light-cyan;
         }
-        }
+    }
         
     &.Red {
-        background-color: #3c345c;
         pointer-events: none;
-        font-weight: bold;
+        background-color: $dark;
     
         &:hover {
-            background-color: #3c345c;
+            background-color: $dark;
         }
     }
 }

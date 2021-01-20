@@ -1,3 +1,5 @@
+@import "../../utils/scss/colors.scss";
+
 %live {
     display: flex;
     justify-content: center;
@@ -5,7 +7,7 @@
     width: 18px;
     height: 18px;
     position: relative;
-    color: #d30cb8;
+    color: $light-pink;
     margin: 0 0.2rem;
 }
 

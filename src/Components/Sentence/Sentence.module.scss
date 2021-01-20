@@ -1,8 +1,9 @@
+@import "../../utils/scss/colors.scss";
+
 .Sentence {
     font-size: 3rem;
     text-align: center;
     margin: 1rem 0;
     pointer-events: none;
-    // color: inherit;
-    color: #6df1d8;
+    color: $light-cyan;
 }
