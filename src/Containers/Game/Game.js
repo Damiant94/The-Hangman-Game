@@ -45,7 +45,7 @@ class Game extends Component {
   restart = () => {
     this.setState(this.getFreshState());
 
-    for (const button of document.querySelectorAll(`.${classesLetter.Green}, .${classesLetter.Red}`)) {
+    for (const button of document.querySelectorAll(`.${classesLetter.Correct}, .${classesLetter.Wrong}`)) {
       button.className = classesLetter.Letter;
       button.disabled = false;
     }
@@ -55,34 +55,41 @@ class Game extends Component {
     }
   };
 
+  correctLetterHandle = (clickedLetter) => {
+    clickedLetter.classList.add(classesLetter.Correct);
+    let newCurrentSentence = "";
+    for (const letter of this.state.sentence) {
+      if (letter === clickedLetter.innerHTML || letter === " " || this.state.currentSentence.includes(letter)) {
+        newCurrentSentence += letter;
+      } else {
+        newCurrentSentence += "-";
+      }
+    }
+    this.setState({currentSentence: newCurrentSentence}, () => {
+      if (!this.state.currentSentence.includes("-")) {
+        this.setState({win: true});
+      }
+    });
+  };
+
+  wrongLetterHandle = (clickedLetter) => {
+    clickedLetter.classList.add(classesLetter.Wrong);
+    document.querySelector(`[data-heart="${this.state.lives}"]`).className = classesHeart.HeartLost;
+    this.setState((prevState) => {
+      return {lives: prevState.lives - 1}
+    }, () => {
+      if (this.state.lives === 0) {
+        this.setState({win: false});
+      }
+    });
+  };
+
   letterClickHandler = (clickedLetter) => {
     clickedLetter.disabled = true;
-    const letterStr = clickedLetter.innerHTML;
-    if (this.state.sentence.includes(letterStr)) {
-      clickedLetter.classList.add(classesLetter.Green);
-      let newCurrentSentence = "";
-      for (const letter of this.state.sentence) {
-        if (letter === letterStr || letter === " " || this.state.currentSentence.includes(letter)) {
-          newCurrentSentence += letter;
-        } else {
-          newCurrentSentence += "-";
-        }
-      }
-      this.setState({currentSentence: newCurrentSentence}, () => {
-        if (!this.state.currentSentence.includes("-")) {
-          this.setState({win: true});
-        }
-      });
+    if (this.state.sentence.includes(clickedLetter.innerHTML)) {
+      this.correctLetterHandle(clickedLetter);
     } else {
-      clickedLetter.classList.add(classesLetter.Red);
-      document.querySelector(`[data-heart="${this.state.lives}"]`).className = classesHeart.HeartLost;
-      this.setState((prevState) => {
-        return {lives: prevState.lives - 1}
-      }, () => {
-        if (this.state.lives === 0) {
-          this.setState({win: false});
-        }
-      });
+      this.wrongLetterHandle(clickedLetter);
     }
   };
 

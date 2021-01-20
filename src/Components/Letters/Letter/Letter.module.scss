@@ -23,7 +23,7 @@
     }
 
 
-    &.Green {
+    &.Correct {
         pointer-events: none;
         background-color: $dark-cyan;
         border: 1px solid $light-cyan;
@@ -35,7 +35,7 @@
         }
     }
         
-    &.Red {
+    &.Wrong {
         pointer-events: none;
         background-color: $dark;
     
