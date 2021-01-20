@@ -25,7 +25,7 @@ class Game extends Component {
       sentence: sentence,
       currentSentence: currentSentence,
       lives: 9,
-      win: undefined
+      win: null
     }
   };
 
@@ -88,19 +88,7 @@ class Game extends Component {
 
   render() {
     let view;
-    if (this.state.win) {
-      view = <Result 
-                message="You won!" 
-                classColor="Win" 
-                restart={this.restart} 
-                sentence={this.state.sentence}/>
-    } else if (this.state.win === false) {
-      view = <Result 
-                message="You lose." 
-                classColor="Lose" 
-                restart={this.restart} 
-                sentence={this.state.sentence}/>
-    } else {
+    if (this.state.win === null) {
       view = (
         <Fragment>
           <Sentence currentSentence={this.state.currentSentence} />
@@ -108,17 +96,33 @@ class Game extends Component {
           <Reset clickHandle={this.restart} />
         </Fragment>
       );
+    } else {
+      let message, classColor;
+      if (this.state.win) {
+        message = "You won!";
+        classColor = "Win";
+      } else {
+        message = "You lose.";
+        classColor = "Lose";
+      }
+      view = (
+        <Result 
+          message={message} 
+          classColor={classColor}
+          restart={this.restart} 
+          sentence={this.state.sentence}
+        />
+      )
     }
-
+  
     return (
       <div className={classes.Game}>
         <Header />
-        <Lives lives={this.state.lives} />
+        <Lives />
         {view}
       </div>
     );
   }
-
 }
 
 export default Game;
