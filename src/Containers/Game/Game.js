@@ -5,12 +5,17 @@ import Sentence from '../../Components/Sentence/Sentence';
 import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
 import Result from '../../Components/Result/Result';
+import Spinner from '../../Components/Spinner/Spinner';
 
 import classes from './Game.module.css';
 import classesHeart from '../../Components/Hearts/Heart/Heart.module.css';
 import classesLetter from '../../Components/Letters/Letter/Letter.module.css';
 
+import axios from 'axios';
+
 import words from '../../utils/js/words';
+
+const randomWordUrl = 'https://random-word-api.herokuapp.com/word?number=1';
 
 class Game extends Component {
   constructor() {
@@ -20,17 +25,15 @@ class Game extends Component {
   }
 
   getFreshState = () => {
-    const [sentence, currentSentence] = this.createSentence();
     return {
-      sentence: sentence,
-      currentSentence: currentSentence,
+      sentence: null,
+      currentSentence: null,
       lives: 9,
       win: null
     }
   };
 
-  createSentence = () => {
-    const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
+  setSentence = (sentence) => {
     let currentSentence = "";
     for (const letter of sentence) {
       if (letter === " ") {
@@ -39,11 +42,34 @@ class Game extends Component {
         currentSentence += "-";
       }
     }
-    return [sentence, currentSentence];
+    this.setState({
+      sentence: sentence,
+      currentSentence: currentSentence
+    });
   };
+
+  createSentence = () => {
+    axios.get(randomWordUrl)
+      .then(response => {
+        const sentence = response.data[0].toUpperCase().split("");
+        this.setSentence(sentence);
+        console.log("word taken from api")
+      }
+    ).catch((error) => {
+      // console.log(error);
+      const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
+      this.setSentence(sentence);
+      console.log("word taken from frontend")
+    });
+  };
+
+  componentDidMount() {
+    this.createSentence();
+  }
 
   restart = () => {
     this.setState(this.getFreshState());
+    this.createSentence();
 
     for (const button of document.querySelectorAll(`.${classesLetter.Correct}, .${classesLetter.Wrong}`)) {
       button.className = classesLetter.Letter;
@@ -94,7 +120,7 @@ class Game extends Component {
   };
 
   render() {
-    let view;
+    let view = null;
     if (this.state.win === null) {
       view = (
         <Fragment>
@@ -126,7 +152,7 @@ class Game extends Component {
       <div className={classes.Game}>
         <Header />
         <Hearts />
-        {view}
+        {this.state.sentence ? view : <Spinner />}
       </div>
     );
   }
