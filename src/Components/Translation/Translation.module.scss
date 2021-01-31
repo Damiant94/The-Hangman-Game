@@ -25,6 +25,7 @@
         letter-spacing: 5px;
         font-size: 5rem;
         pointer-events: none;
+        overflow-wrap: break-word;
     }
     
     .Definition {
@@ -54,6 +55,12 @@
 
                 &:hover {
                     color: $light-cyan;
+                }
+            }
+
+            &.Disabled {
+                i {
+                    pointer-events: none;
                 }
             }
         }

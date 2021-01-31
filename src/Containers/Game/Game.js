@@ -184,7 +184,8 @@ class Game extends Component {
       view = (
         <Fragment>
           <Translation 
-            definition={this.state.currentDefinition} 
+            definition={this.state.currentDefinition}
+            definitionsNumber={this.state.definitions.length} 
             show={this.state.backdrop}
             change={this.changeDefinitionHandler}
             hide={this.hideDefinitionsHandler}

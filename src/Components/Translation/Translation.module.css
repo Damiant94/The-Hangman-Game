@@ -28,6 +28,7 @@
   letter-spacing: 5px;
   font-size: 5rem;
   pointer-events: none;
+  overflow-wrap: break-word;
 }
 
 .Translation .Definition {
@@ -73,6 +74,10 @@
 
 .Translation .Icons .IconWrapper i:hover {
   color: #6df1d8;
+}
+
+.Translation .Icons .IconWrapper.Disabled i {
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
