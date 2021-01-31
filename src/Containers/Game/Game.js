@@ -42,10 +42,10 @@ class Game extends Component {
   setSentence = (sentence) => {
     let currentSentence = "";
     for (const letter of sentence) {
-      if (letter === " ") {
-        currentSentence += " ";
+      if (letter === " " || letter === "-" || letter === ".") {
+        currentSentence += letter;
       } else {
-        currentSentence += "-";
+        currentSentence += "_";
       }
     }
     this.setState({
@@ -61,7 +61,7 @@ class Game extends Component {
       .then(response => {
         const sentence = response.data[0].toUpperCase().split("");
         this.setSentence(sentence);
-        // this.setSentence(["G", "O"]);
+        // this.setSentence(["G", "-"]);
         console.log("word taken from api");
       })
       .catch(() => {
@@ -112,11 +112,11 @@ class Game extends Component {
       if (letter === clickedLetter.innerHTML || letter === " " || this.state.currentSentence.includes(letter)) {
         newCurrentSentence += letter;
       } else {
-        newCurrentSentence += "-";
+        newCurrentSentence += "_";
       }
     }
     this.setState({currentSentence: newCurrentSentence}, () => {
-      if (!this.state.currentSentence.includes("-")) {
+      if (!this.state.currentSentence.includes("_")) {
         this.setState({win: true});
       }
     });
