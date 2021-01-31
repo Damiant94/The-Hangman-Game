@@ -80,9 +80,6 @@
 }
 
 @media (max-width: 600px) {
-  .Translation {
-    width: calc(100vw - 50px);
-  }
   .Translation .Sentence {
     font-size: 3.5rem;
   }
