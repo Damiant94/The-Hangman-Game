@@ -12,6 +12,16 @@
   text-align: left;
   max-height: 100vh;
   overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Translation.hidden {
@@ -25,13 +35,13 @@
 }
 
 .Translation .Sentence {
-  text-align: center;
   color: #d30cb8;
   font-weight: bold;
   letter-spacing: 5px;
   font-size: 4.5rem;
   pointer-events: none;
   overflow-wrap: break-word;
+  max-width: 1200px;
 }
 
 .Translation .Definition {
@@ -41,6 +51,7 @@
   margin-top: 20px;
   font-size: 3.2rem;
   pointer-events: none;
+  max-width: 1200px;
 }
 
 .Translation .Icons {

@@ -6,7 +6,7 @@ When user pick all letters, which the word contains, he wins.
 After a round, user can check the definition(s) of the word.
 
 # Technologies
-HTML, SCSS, React
+React, SCSS
 
 # Apis used:
 [https://random-word-api.herokuapp.com/](https://random-word-api.herokuapp.com/)
