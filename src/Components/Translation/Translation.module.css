@@ -7,8 +7,11 @@
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  width: calc(100vw - 100px);
+  width: 100vw;
+  padding: 50px;
   text-align: left;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .Translation.hidden {
