@@ -3,12 +3,12 @@ import classes from './Letters.module.css';
 import Letter from './Letter/Letter';
 
 const letters = (props) => {
-    const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split("").map((letter) => {
+    const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("").map((letter) => {
         return (
             <Letter 
                 key={letter}
                 onClick={props.clickHandle}
-                value={letter.toUpperCase()}
+                value={letter}
             />
         )
     });

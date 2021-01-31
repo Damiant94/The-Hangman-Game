@@ -40,12 +40,13 @@ class Game extends Component {
   };
 
   setSentence = (sentence) => {
+    const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let currentSentence = "";
     for (const letter of sentence) {
-      if (letter === " " || letter === "-" || letter === ".") {
-        currentSentence += letter;
-      } else {
+      if (allLetters.includes(letter)) {
         currentSentence += "_";
+      } else {
+        currentSentence += letter;
       }
     }
     this.setState({
@@ -61,7 +62,7 @@ class Game extends Component {
       .then(response => {
         const sentence = response.data[0].toUpperCase().split("");
         this.setSentence(sentence);
-        // this.setSentence(["G", "-"]);
+        // this.setSentence("GO-.".split(""));
         console.log("word taken from api");
       })
       .catch(() => {
@@ -185,7 +186,7 @@ class Game extends Component {
         <Fragment>
           <Translation 
             definition={this.state.currentDefinition}
-            definitionsNumber={this.state.definitions.length} 
+            definitionsNumber={this.state.definitions ? this.state.definitions.length : null} 
             show={this.state.backdrop}
             change={this.changeDefinitionHandler}
             hide={this.hideDefinitionsHandler}
