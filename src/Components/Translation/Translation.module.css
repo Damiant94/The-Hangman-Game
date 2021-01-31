@@ -7,7 +7,7 @@
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  width: calc(100vw - 200px);
+  width: calc(100vw - 100px);
   text-align: left;
 }
 
@@ -26,7 +26,7 @@
   color: #d30cb8;
   font-weight: bold;
   letter-spacing: 5px;
-  font-size: 5rem;
+  font-size: 4.5rem;
   pointer-events: none;
   overflow-wrap: break-word;
 }
@@ -36,7 +36,7 @@
   color: #6df1d8;
   overflow-wrap: break-word;
   margin-top: 20px;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   pointer-events: none;
 }
 
@@ -74,10 +74,6 @@
 
 .Translation .Icons .IconWrapper i:hover {
   color: #6df1d8;
-}
-
-.Translation .Icons .IconWrapper.Disabled i {
-  pointer-events: none;
 }
 
 @media (max-width: 600px) {

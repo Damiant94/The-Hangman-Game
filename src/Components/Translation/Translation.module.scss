@@ -6,7 +6,7 @@
     top: 50%;
     z-index: 3;
     transition: transform 0.5s ease-in-out;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 100px);
     text-align: left;
 
 
@@ -23,7 +23,7 @@
         color: $light-pink;
         font-weight: bold;
         letter-spacing: 5px;
-        font-size: 5rem;
+        font-size: 4.5rem;
         pointer-events: none;
         overflow-wrap: break-word;
     }
@@ -33,7 +33,7 @@
         color: $light-cyan;
         overflow-wrap: break-word;
         margin-top: 20px;
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         pointer-events: none;
     }
     
@@ -57,19 +57,9 @@
                     color: $light-cyan;
                 }
             }
-
-            &.Disabled {
-                i {
-                    pointer-events: none;
-                }
-            }
         }
     }
 }
-
-
-
-
 
 @media (max-width: 600px) {
     .Translation {
