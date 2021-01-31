@@ -6,6 +6,8 @@ import Letters from '../../Components/Letters/Letters';
 import Reset from '../../Components/Reset/Reset';
 import Result from '../../Components/Result/Result';
 import Spinner from '../../Components/Spinner/Spinner';
+import Backdrop from '../../Components/Backdrop/Backdrop';
+import Translation from '../../Components/Translation/Translation';
 
 import classes from './Game.module.css';
 import classesHeart from '../../Components/Hearts/Heart/Heart.module.css';
@@ -16,6 +18,7 @@ import axios from 'axios';
 import words from '../../utils/js/words';
 
 const randomWordUrl = 'https://random-word-api.herokuapp.com/word?number=1';
+const translationUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en_US/';
 
 class Game extends Component {
   constructor() {
@@ -28,8 +31,11 @@ class Game extends Component {
     return {
       sentence: null,
       currentSentence: null,
+      definitions: null,
+      currentDefinition: null,
       lives: 9,
-      win: null
+      win: null,
+      backdrop: false
     }
   };
 
@@ -45,6 +51,8 @@ class Game extends Component {
     this.setState({
       sentence: sentence,
       currentSentence: currentSentence
+    }, () => {
+      this.setDefinitions(sentence.join(""));
     });
   };
 
@@ -53,14 +61,30 @@ class Game extends Component {
       .then(response => {
         const sentence = response.data[0].toUpperCase().split("");
         this.setSentence(sentence);
-        console.log("word taken from api")
-      }
-    ).catch((error) => {
-      // console.log(error);
-      const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
-      this.setSentence(sentence);
-      console.log("word taken from frontend")
-    });
+        // this.setSentence(["G", "O"]);
+        console.log("word taken from api");
+      })
+      .catch(() => {
+        const sentence = words[Math.floor(Math.random() * words.length)].toUpperCase().split("");
+        this.setSentence(sentence);
+        console.log("word taken from frontend");
+      });
+  };
+
+  setDefinitions = (word) => {
+    axios.get(translationUrl + word)
+      .then(response => {
+        const definitions = response.data[0].meanings
+          .reduce((acc, meaning) => {
+            return acc.concat(meaning.definitions)
+            }, [])
+          .map(element => element.definition);
+        this.setState({definitions: definitions, currentDefinition: definitions[0]});
+      })
+      .catch(() => {
+        const message = "Sorry, couldn't find a definition";
+        this.setState({definitions: [message], currentDefinition: message});
+      })
   };
 
   componentDidMount() {
@@ -119,6 +143,25 @@ class Game extends Component {
     }
   };
 
+  showDefinitionsHandler = () => {
+    this.setState({backdrop: true});
+  };
+
+  hideDefinitionsHandler = () => {
+    this.setState({backdrop: false});
+  }
+
+  changeDefinitionHandler = () => {
+    this.setState((prevState) => {
+      const definitionsNumber = prevState.definitions.length;
+      const currentDefinitionIndex = prevState.definitions.indexOf(prevState.currentDefinition);
+      const newDefinitionIndex = definitionsNumber - 1 !== currentDefinitionIndex ? currentDefinitionIndex + 1 : 0;
+      return {
+        currentDefinition: prevState.definitions[newDefinitionIndex]
+      };
+    })
+  };
+
   render() {
     let view = null;
     if (this.state.win === null) {
@@ -139,12 +182,23 @@ class Game extends Component {
         classColor = "Lose";
       }
       view = (
-        <Result 
-          message={message} 
-          classColor={classColor}
-          restart={this.restart} 
-          sentence={this.state.sentence.join("")}
-        />
+        <Fragment>
+          <Translation 
+            definition={this.state.currentDefinition} 
+            show={this.state.backdrop}
+            change={this.changeDefinitionHandler}
+            hide={this.hideDefinitionsHandler}
+            sentence={this.state.sentence.join("")}/>
+          <Backdrop show={this.state.backdrop}/>
+          <Result 
+            message={message} 
+            classColor={classColor}
+            restart={this.restart} 
+            sentence={this.state.sentence.join("")}
+            resultClicked={this.showDefinitionsHandler}
+          />
+        </Fragment>
+
       )
     }
   

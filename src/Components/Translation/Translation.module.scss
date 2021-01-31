@@ -1,0 +1,95 @@
+@import "../../utils/scss/colors.scss";
+
+.Translation {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100vw - 200px);
+    text-align: left;
+
+
+    &.hidden {
+        transform: translateY(-500%) translateX(-50%);
+    }
+
+    &.visible {
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .Sentence {
+        text-align: center;
+        color: $light-pink;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-size: 5rem;
+        pointer-events: none;
+    }
+    
+    .Definition {
+        text-align: center;
+        color: $light-cyan;
+        overflow-wrap: break-word;
+        margin-top: 20px;
+        font-size: 3.5rem;
+        pointer-events: none;
+    }
+    
+    .Icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .IconWrapper {
+            color: $light-pink;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        
+            i {
+                cursor: pointer;
+                margin-left: 10px;
+                font-size: 4rem;
+                transition: color 0.2s ease-in-out;
+
+                &:hover {
+                    color: $light-cyan;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .Translation {
+        width: calc(100vw - 50px);
+
+        .Sentence {
+            font-size: 3.5rem;
+        }
+
+        .Definition {
+            font-size: 2.5rem;
+        }
+
+    .Icons {
+        .IconWrapper {
+            i {
+                font-size: 3rem;
+            }
+
+        }
+
+    }
+
+    }
+
+    
+
+}
+
+

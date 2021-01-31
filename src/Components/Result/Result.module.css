@@ -61,6 +61,11 @@
   color: #d30cb8;
 }
 
+.Results p:nth-of-type(3):hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .Results button {
   width: 5rem;
   font-size: 0.8rem;

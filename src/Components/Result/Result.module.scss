@@ -31,6 +31,11 @@
             margin-bottom: 1rem;
             font-size: 1.5rem;
             color: $light-pink;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
         }
     }
 

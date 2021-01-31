@@ -1,0 +1,92 @@
+.Translation {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  width: calc(100vw - 200px);
+  text-align: left;
+}
+
+.Translation.hidden {
+  -webkit-transform: translateY(-500%) translateX(-50%);
+          transform: translateY(-500%) translateX(-50%);
+}
+
+.Translation.visible {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.Translation .Sentence {
+  text-align: center;
+  color: #d30cb8;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 5rem;
+  pointer-events: none;
+}
+
+.Translation .Definition {
+  text-align: center;
+  color: #6df1d8;
+  overflow-wrap: break-word;
+  margin-top: 20px;
+  font-size: 3.5rem;
+  pointer-events: none;
+}
+
+.Translation .Icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Translation .Icons .IconWrapper {
+  color: #d30cb8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.Translation .Icons .IconWrapper i {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 4rem;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.Translation .Icons .IconWrapper i:hover {
+  color: #6df1d8;
+}
+
+@media (max-width: 600px) {
+  .Translation {
+    width: calc(100vw - 50px);
+  }
+  .Translation .Sentence {
+    font-size: 3.5rem;
+  }
+  .Translation .Definition {
+    font-size: 2.5rem;
+  }
+  .Translation .Icons .IconWrapper i {
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=Translation.module.css.map */
