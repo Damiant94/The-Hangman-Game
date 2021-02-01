@@ -17,7 +17,8 @@ import axios from 'axios';
 
 import words from '../../utils/js/words';
 
-const randomWordUrl = 'https://random-word-api.herokuapp.com/word?number=1';
+// const randomWordUrl = 'https://random-word-api.herokuapp.com/word?number=1';
+const randomWordUrl = 'https://random-word-rest-api.herokuapp.com/word';
 const translationUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en_US/';
 
 class Game extends Component {
@@ -60,7 +61,7 @@ class Game extends Component {
   createSentence = () => {
     axios.get(randomWordUrl)
       .then(response => {
-        const sentence = response.data[0].toUpperCase().split("");
+        const sentence = response.data.toUpperCase().split("");
         this.setSentence(sentence);
         // this.setSentence("GO-.".split(""));
         console.log("word taken from api");

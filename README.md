@@ -9,7 +9,7 @@ After a round, user can check the definition(s) of the word.
 React, SCSS
 
 # Apis used:
-[https://random-word-api.herokuapp.com/](https://random-word-api.herokuapp.com/)\
+[https://github.com/Damiant94/random-word-rest-api](https://github.com/Damiant94/random-word-rest-api)\
 [https://dictionaryapi.dev/](https://dictionaryapi.dev/)
 
 # Preview
