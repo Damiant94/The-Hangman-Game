@@ -3,7 +3,8 @@ My implementation of The Hangman Game.\
 User need to guess letters to reveal the word.\
 User has 9 lives, so after pick wrong letter 9 times, he loses.\
 When user pick all letters, which the word contains, he wins.\
-After a round, user can check the definition(s) of the word.
+After win or fail, user can check the definition(s) of the word.\
+User can click on any word of definition, to get definition of this word in outer source.
 
 # Technologies
 React, SCSS
