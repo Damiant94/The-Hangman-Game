@@ -74,6 +74,7 @@ class Game extends Component {
   };
 
   setDefinitions = (word) => {
+    const message = "Sorry, couldn't find a definition";
     axios.get(translationUrl + word)
       .then(response => {
         const definitions = response.data[0].meanings
@@ -81,10 +82,10 @@ class Game extends Component {
             return acc.concat(meaning.definitions)
             }, [])
           .map(element => element.definition);
-        this.setState({definitions: definitions, currentDefinition: definitions[0]});
+        if (definitions.length === 0) this.setState({definitions: [message], currentDefinition: message});
+        else this.setState({definitions: definitions, currentDefinition: definitions[0]});
       })
       .catch(() => {
-        const message = "Sorry, couldn't find a definition";
         this.setState({definitions: [message], currentDefinition: message});
       })
   };

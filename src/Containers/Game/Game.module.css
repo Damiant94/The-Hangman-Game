@@ -30,4 +30,8 @@
           box-shadow: 0px 0px 20px -10px #6df1d8;
   border: 1px solid #6df1d8;
 }
+
+.Game:hover > div:first-of-type {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5da4a6, 0 0 40px #5da4a6;
+}
 /*# sourceMappingURL=Game.module.css.map */
