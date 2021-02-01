@@ -8,5 +8,9 @@
   -webkit-transition: text-shadow 0.5s ease-in-out;
   transition: text-shadow 0.5s ease-in-out;
   text-shadow: 0 0 10px #fff, 0 0 30px #5da4a6;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=Header.module.css.map */

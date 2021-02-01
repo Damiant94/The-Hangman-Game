@@ -9,4 +9,5 @@
     color: $light-cyan;
     transition: text-shadow 0.5s ease-in-out;
     text-shadow: 0 0 10px #fff, 0 0 30px $dark-cyan;
+    user-select: none;
 }

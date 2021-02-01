@@ -19,6 +19,7 @@
     flex-direction: column;
 
     p {
+        user-select: none;
         &:nth-of-type(1) {
             margin-bottom: 0.5rem;
             pointer-events: none;

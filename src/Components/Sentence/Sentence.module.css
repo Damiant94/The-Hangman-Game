@@ -5,5 +5,9 @@
   pointer-events: none;
   color: #6df1d8;
   letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=Sentence.module.css.map */
