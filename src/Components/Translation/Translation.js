@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import classes from './Translation.module.css';
 
 const translation = (props) => {
@@ -13,10 +13,31 @@ const translation = (props) => {
         </div>
     ) : null;
 
+    const definition = props.definition.split(" ").map((word, index) => {
+        return (
+            <Fragment key={index}>
+                <a 
+                    href={`https://dictionary.cambridge.org/dictionary/english/${word}`} 
+                    target="_blank"
+                    rel="noreferrer">
+                    {word}
+                </a>
+                <span>{" "}</span>
+            </Fragment>
+        );
+    })
+
     return (
         <div className={`${classes.Translation} ${secondClassName}`}>
-            <div className={classes.Sentence}>{props.sentence}</div>
-            <div className={classes.Definition}>{props.definition}</div>
+            <div className={classes.Sentence}>
+                <a 
+                    href={`https://dictionary.cambridge.org/dictionary/english/${props.sentence}`} 
+                    target="_blank"
+                    rel="noreferrer">
+                    {props.sentence}
+                </a>
+            </div>
+            <div className={classes.Definition}>{definition}</div>
             <div className={classes.Icons}>
                 {buttonNext}
                 <div 
