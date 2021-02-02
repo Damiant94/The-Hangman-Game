@@ -9,5 +9,6 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  word-break: break-word;
 }
 /*# sourceMappingURL=Sentence.module.css.map */

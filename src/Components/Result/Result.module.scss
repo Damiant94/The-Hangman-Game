@@ -33,6 +33,7 @@
             font-size: 1.5rem;
             color: $light-pink;
             transition: color 0.2s ease-in-out;
+            word-break: break-word;
 
             &:hover {
                 cursor: pointer;
