@@ -61,7 +61,7 @@ class Game extends Component {
   createSentence = () => {
     axios.get(randomWordUrl)
       .then(response => {
-        const sentence = response.data.toUpperCase().split("");
+        const sentence = response.data[0].toUpperCase().split("");
         this.setSentence(sentence);
         // this.setSentence("GO-.".split(""));
         console.log("word taken from api");
