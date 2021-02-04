@@ -42,7 +42,7 @@
   color: #d30cb8;
   font-weight: bold;
   letter-spacing: 5px;
-  font-size: 4.5rem;
+  font-size: 3rem;
   word-break: break-word;
   max-width: 1200px;
 }
@@ -63,8 +63,9 @@
   color: #6df1d8;
   overflow-wrap: break-word;
   margin-top: 20px;
-  font-size: 3.2rem;
-  max-width: 1200px;
+  font-size: 2rem;
+  max-width: 900px;
+  padding: 0 5rem;
 }
 
 .Translation .Definition > a {
@@ -116,10 +117,11 @@
 
 @media (max-width: 600px) {
   .Translation .Sentence {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .Translation .Definition {
-    font-size: 2.5rem;
+    padding: 0;
+    font-size: 2rem;
   }
   .Translation .Icons .IconWrapper i {
     font-size: 3rem;

@@ -10,3 +10,15 @@
     user-select: none;
     word-break: break-word;
 }
+
+@media (max-width: 500px) {
+    .Sentence {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .Sentence {
+        font-size: 2rem;
+    }
+}

@@ -28,7 +28,7 @@
         color: $light-pink;
         font-weight: bold;
         letter-spacing: 5px;
-        font-size: 4.5rem;
+        font-size: 3rem;
         word-break: break-word;
         max-width: 1200px;
 
@@ -48,9 +48,10 @@
         color: $light-cyan;
         overflow-wrap: break-word;
         margin-top: 20px;
-        font-size: 3.2rem;
+        font-size: 2rem;
         // pointer-events: none;
-        max-width: 1200px;
+        max-width: 900px;
+        padding: 0 5rem;
 
         > a {
             color: inherit;
@@ -91,11 +92,12 @@
     .Translation {
 
         .Sentence {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
         }
 
         .Definition {
-            font-size: 2.5rem;
+            padding: 0;
+            font-size: 2rem;
         }
 
         .Icons {
