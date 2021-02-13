@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/The-Hangman-Game/static/css/main.993fe653.chunk.css",
-    "main.js": "/The-Hangman-Game/static/js/main.97f99349.chunk.js",
-    "main.js.map": "/The-Hangman-Game/static/js/main.97f99349.chunk.js.map",
-    "runtime-main.js": "/The-Hangman-Game/static/js/runtime-main.4667d3d6.js",
-    "runtime-main.js.map": "/The-Hangman-Game/static/js/runtime-main.4667d3d6.js.map",
-    "static/js/2.d08a93c8.chunk.js": "/The-Hangman-Game/static/js/2.d08a93c8.chunk.js",
-    "static/js/2.d08a93c8.chunk.js.map": "/The-Hangman-Game/static/js/2.d08a93c8.chunk.js.map",
-    "static/js/3.c91b2171.chunk.js": "/The-Hangman-Game/static/js/3.c91b2171.chunk.js",
-    "static/js/3.c91b2171.chunk.js.map": "/The-Hangman-Game/static/js/3.c91b2171.chunk.js.map",
-    "index.html": "/The-Hangman-Game/index.html",
-    "static/css/main.993fe653.chunk.css.map": "/The-Hangman-Game/static/css/main.993fe653.chunk.css.map",
-    "static/js/2.d08a93c8.chunk.js.LICENSE.txt": "/The-Hangman-Game/static/js/2.d08a93c8.chunk.js.LICENSE.txt"
+    "main.css": "/the-hangman-game/static/css/main.993fe653.chunk.css",
+    "main.js": "/the-hangman-game/static/js/main.97f99349.chunk.js",
+    "main.js.map": "/the-hangman-game/static/js/main.97f99349.chunk.js.map",
+    "runtime-main.js": "/the-hangman-game/static/js/runtime-main.152dbdf9.js",
+    "runtime-main.js.map": "/the-hangman-game/static/js/runtime-main.152dbdf9.js.map",
+    "static/js/2.d08a93c8.chunk.js": "/the-hangman-game/static/js/2.d08a93c8.chunk.js",
+    "static/js/2.d08a93c8.chunk.js.map": "/the-hangman-game/static/js/2.d08a93c8.chunk.js.map",
+    "static/js/3.c91b2171.chunk.js": "/the-hangman-game/static/js/3.c91b2171.chunk.js",
+    "static/js/3.c91b2171.chunk.js.map": "/the-hangman-game/static/js/3.c91b2171.chunk.js.map",
+    "index.html": "/the-hangman-game/index.html",
+    "static/css/main.993fe653.chunk.css.map": "/the-hangman-game/static/css/main.993fe653.chunk.css.map",
+    "static/js/2.d08a93c8.chunk.js.LICENSE.txt": "/the-hangman-game/static/js/2.d08a93c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4667d3d6.js",
+    "static/js/runtime-main.152dbdf9.js",
     "static/js/2.d08a93c8.chunk.js",
     "static/css/main.993fe653.chunk.css",
     "static/js/main.97f99349.chunk.js"
