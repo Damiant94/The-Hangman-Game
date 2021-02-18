@@ -14,4 +14,4 @@ React, SCSS
 [https://dictionaryapi.dev/](https://dictionaryapi.dev/)
 
 # Preview
-[https://damiant94.github.io/The-Hangman-Game/](https://damiant94.github.io/The-Hangman-Game/)
+[https://damiant94.github.io/the-hangman-game/](https://damiant94.github.io/the-hangman-game/)
